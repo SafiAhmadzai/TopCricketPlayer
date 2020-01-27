@@ -5,9 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.topcricketplayer.adapters.PlayerAdapter;
 import com.example.topcricketplayer.models.Players;
+import com.example.topcricketplayer.utlities.SessionManager;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.CollectionReference;
@@ -24,11 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
     private PlayerAdapter adapter;
 
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sessionManager=new SessionManager(MainActivity.this);
         setUpRecyclerView();
     }
 
@@ -59,4 +64,8 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+
+
+
+
 }
