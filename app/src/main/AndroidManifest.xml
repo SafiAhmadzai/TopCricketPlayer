@@ -11,17 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_on_boarding_flow"></activity>
-        <activity android:name=".VerificationOTPActivity" />
-        <activity android:name=".register_with_phone" />
-        <activity
-            android:name=".SplashScreen"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".activity_on_boarding_flow">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".VerificationOTPActivity" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".register_with_phone" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
